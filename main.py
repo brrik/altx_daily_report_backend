@@ -38,6 +38,7 @@ def get_all_value():
 
     selected_df = df[["ID", "Title", "PostedBy"]].head(10)
     Selected_Knoledge = selected_df.to_dict(orient='records')
+    print(Selected_Knoledge)
     return Selected_Knoledge
 
 def get_filtered_data(knowledge_sheet, comment_sheet, target_id):
