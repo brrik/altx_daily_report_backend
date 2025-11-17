@@ -98,7 +98,7 @@ app.add_middleware(
 
 
 #起動時にスプレッドシートの上から５件の"ID", "Title", "PostedBy", "Content"を取得する。
-@app.get("/items")
+@app.get("/old/items")
 async def init_get_items():
     records = knowledge_sheet.get_all_records()
     
@@ -110,7 +110,7 @@ async def init_get_items():
 
     return {"data": filtered_records}
 
-@app.get("/items1")
+@app.get("/items")
 async def init_get_all_values():
     # get_all_value関数を利用してフロント起動時の10件を取得
     filtered_records = get_all_value()
